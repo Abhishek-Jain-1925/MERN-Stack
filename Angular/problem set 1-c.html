@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Problem Set 1-C - Solution</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+</head>
+<body>
+    <div ng-app="myApp" ng-controller="myCntrl">
+        <h2>Fill Below Information :</h2>
+        First Name : <input type="text" ng-model="fname"/> <br><br>
+        Last Name : <input type="text" ng-model="lname"/> <br><br>
+        Date Od Birth : <input type="date" ng-model="dob"/> <br><br>
+        Mobile No : <input type="tel" ng-model="mob"/> <br><br>
+
+        <h2>Check Your Details : </h2>
+        Full Name : {{fname+" "+lname}} <br>
+        Date of Birth : {{dob}}<br>
+        Mobile No : {{mob}}<br>
+    </div>
+    <script>
+        var app = angular.module("myApp",[]);
+        app.controller("myCntrl",function($scope){
+            $scope.fname="Abhishek";
+            $scope.lname="Dhondalkar";
+            $scope.dob="14-07-2001";
+            $scope.mob="9595601925";
+        });
+    </script>
+</body>
+</html>
